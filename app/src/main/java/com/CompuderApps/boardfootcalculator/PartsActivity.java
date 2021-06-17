@@ -9,24 +9,32 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <h1>Parts Activity</h1>
+ * Activity that shows the parts of a project.
+ *
+ * @version alpha
+ * @since 06/2021
+ */
 public class PartsActivity extends AppCompatActivity {
 
+    /** List of parts to be shown in the activity */
+    List<Part> PartsList;
+
     @Override
+    /**
+     * On create function. Initializes the activity when it is created.
+     *
+     * @version alpha
+     * @since 06/2021
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         RecyclerView rvParts = (RecyclerView) findViewById(R.id.part_list);
 
-        List<Part> PartsList = new ArrayList<Part>();
-        Part part = new Part("Top", 1, 1, 1, 1);
-        Part part1 = new Part("Side", 10, 10, 10, 10);
-        Part part2 = new Part("Bottom", 1000, 1000, 1000, 1000);
-        Part part3 = new Part("Top", 10000, 10000, 10000, 10000);
-        PartsList.add(part);
-        PartsList.add(part1);
-        PartsList.add(part2);
-        PartsList.add(part3);
+        PartsList = new ArrayList<Part>();
         // Create adapter passing in the sample user data
         PartsListAdapter adapter = new PartsListAdapter(PartsList);
         // Attach the adapter to the recyclerview to populate items

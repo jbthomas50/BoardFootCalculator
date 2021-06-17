@@ -12,15 +12,24 @@ import java.util.List;
 // per Megan: create woody background
 
 
-
+/**
+ * <h1>Main Activity</h1>
+ * Main activity/landing page of the app.
+ *
+ * @version alpha
+ * @since 06/2021
+ */
 public class MainActivity extends AppCompatActivity {
-
+    /** Main Activity Project List */
     List<Project> projectList;
 
 
     @Override
     /**
+     * On create function. Initializes the activity when it is created.
      *
+     * @version alpha
+     * @since 06/2021
      */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <h1>Project class</h1>
+ * <h1>Project Class</h1>
  * Keep track of all the different components associated with the same project.
  * Will be able to hold as many parts as the user desires. Also stores a project
  * name.

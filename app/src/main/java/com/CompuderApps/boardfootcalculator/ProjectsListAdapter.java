@@ -66,6 +66,13 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
         ProjectsList = new ArrayList<Project>(projectsList);
     }
 
+
+    /**
+     * On Create View Holder. Initializes the ViewHolder
+     *
+     * @version alpha
+     * @since 06/2021
+     */
     @Override
     public ProjectsListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
@@ -79,6 +86,13 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
         return viewHolder;
     }
 
+
+    /**
+     * On Bind View Holder. Bind the data to the views.
+     *
+     * @version alpha
+     * @since 06/2021
+     */
     @Override
     public void onBindViewHolder(ProjectsListAdapter.ViewHolder holder, int position) {
         Project project = ProjectsList.get(position);
@@ -87,8 +101,15 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
         textView.setText(project.getName());
     }
 
+
+    /**
+     * Get Item Count. Get the count of the items in the projects list.
+     *
+     * @version alpha
+     * @since 06/2021
+     */
     @Override
     public int getItemCount() {
-        return 0;
+        return ProjectsList.size();
     }
 }
