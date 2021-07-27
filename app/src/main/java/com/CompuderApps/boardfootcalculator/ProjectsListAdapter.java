@@ -47,16 +47,6 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
     List<Project> ProjectsList;
 
     /**
-     * Projects List Adapter default constructor.
-     *
-     * @version alpha
-     * @since 06/2021
-     */
-    public ProjectsListAdapter () {
-        ProjectsList = new ArrayList<Project>();
-    }
-
-    /**
      * Projects List Adapter constructor. Sets {@link com.CompuderApps.boardfootcalculator.ProjectsListAdapter#ProjectsList}
      *
      * @version alpha
@@ -97,6 +87,8 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
     public void onBindViewHolder(ProjectsListAdapter.ViewHolder holder, int position) {
         Project project = ProjectsList.get(position);
 
+        TextView textView = holder.ProjectNameTextView;
+        TextView textView = holder.ProjectNameTextView;
         TextView textView = holder.ProjectNameTextView;
         textView.setText(project.getName());
     }

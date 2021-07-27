@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Board Foot Calculator</string>
+    <string name="bd_ft_label">bd. ft.</string>
 </resources>

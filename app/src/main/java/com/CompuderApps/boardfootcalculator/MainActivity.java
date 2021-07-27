@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -37,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView rvProjects = (RecyclerView)findViewById(R.id.project_list);
 
-        ProjectsListAdapter adapter = new ProjectsListAdapter();
+        projectList = new ArrayList<Project>();
+
+        ProjectsListAdapter adapter = new ProjectsListAdapter(projectList);
 
         rvProjects.setAdapter(adapter);
         rvProjects.setLayoutManager(new LinearLayoutManager(this));
